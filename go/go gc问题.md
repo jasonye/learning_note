@@ -1,16 +1,19 @@
 [toc]
 
-垃圾回收的三个阶段:
+# 垃圾回收的三个阶段:
+
     * Mark Setup - STW
     * Marking - Concurrent
     * Mark Termination - STW
   
 第一阶段:打开写屏障(Write Barrier),所有的协程暂停工作.通常耗时10~30ms,垃圾回收进程需要等到所有的协程停止工作才能开始进行.而写成必须要等待函数调用的时候,才能够释放当前CPU,暂停工作.
+
 第二阶段:标记阶段,抢占25%的CPU容量时间,执行垃圾标记工作.扫描现存的goroutines所占领的堆栈,寻找根指针,编列堆栈.垃圾回收Mark助理,帮助一起回收.
+
 第三阶段:Mark Termination(STW)
 打开写屏障,做清扫工作,并且计算下一次垃圾回收的目标. 通常60~90ms
 
-Sweeping-Concurrent 回收结束后,进行清扫工作. This activity occurs when application Goroutines attempt to allocate new values in heap memory. 
+Sweeping-Concurrent 回收结束后,进行清扫工作.  This activity occurs when application Goroutines attempt to allocate new values in heap memory. 
 
 
 执行命令:
@@ -21,7 +24,8 @@ GODEBUG=gctrace=1 go run gc.go
 ![802d34fe971272392866ed1cb686cf42.png](evernotecid://59662A07-E013-4AF5-8108-505FA4B3C4B4/appyinxiangcom/2475354/ENResource/p2084)
 
 
-参考runtime文档内容、
+
+#参考runtime文档内容、
 
 ```
 // 没一行显示gc时间和内容、
@@ -63,10 +67,10 @@ gc 1404     : The 1404 GC run since the program started
 
 // Threads
 12P         : Number of logical processors or threads used to run Goroutines
-
  ```
  
- 参考文档：
+
+# 参考文档：
  https://blog.cyeam.com/golang/2016/08/18/apatternforoptimizinggo
  https://news.ycombinator.com/item?id=17882019
  https://blog.twitch.tv/en/2019/04/10/go-memory-ballast-how-i-learnt-to-stop-worrying-and-love-the-heap-26c2462549a2/
