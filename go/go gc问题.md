@@ -25,7 +25,7 @@ GODEBUG=gctrace=1 go run gc.go
 
 
 
-#参考runtime文档内容、
+# 参考runtime文档内容、
 
 ```
 // 没一行显示gc时间和内容、
