@@ -2,11 +2,12 @@
 本来在栈上分配的内容，但是因为需要在栈上返回给上层调用者。所以编译器会选择在堆上分配；这样带来的一个问题是gc耗时可能会比较高。
 
 Go manages memory allocation automatically. 编译器决定变量分配在栈还是堆上.当栈上的变量被分配在堆上面后,带来性能问题.
-**stack allocation is cheap and heap allocation is expensive. **
+
+** stack allocation is cheap and heap allocation is expensive. **
 
 Go allocates memory in two places: a global heap for dynamic allocations and a local stack for each goroutine. Go prefers allocation on the stack — most of the allocations within a given Go program will be on the stack. It’s cheap because it only requires two CPU instructions: one to push onto the stack for allocation, and another to release from the stack.
 
-**Stack allocation requires that the lifetime and memory footprint of a variable can be determined at compile time.
+** Stack allocation requires that the lifetime and memory footprint of a variable can be determined at compile time.
 **
 
 # 逃逸分析的用处（为了性能）
