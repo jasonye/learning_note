@@ -6,12 +6,13 @@
 # 语言：
 ## go
 * 基础
-* [go 逃逸分析](go/go%20%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90.md)
-* [go gc问题](go/go%20gc%E9%97%AE%E9%A2%98.md)
-* [go pprof](go/go%20pprof优化.md)
+* [go 逃逸分析](./go/go 逃逸分析.md)
+* [go gc问题](./go/go gc问题.md)
+* [go pprof](./go/go%20pprof优化.md)
 * 性能优化、
 
 # 数据库
+
 ## [MySQL](./MySQL/mysql.md)
 ## Redis
 *
