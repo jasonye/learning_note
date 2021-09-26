@@ -3,6 +3,8 @@
 # 算法
 ## [leetcode刷题](https://github.com/jasonye/leetcode)
 
+
+
 # 语言：
 ## go
 * 基础
@@ -33,6 +35,11 @@
 
 # 行业blog
 * [美团点评技术blog](https://tech.meituan.com/)
+* 优秀Git地址：
+    * [The-Art-Of-Programming-By-July](https://github.com/julycoding/The-Art-Of-Programming-By-July)
+    * [Leetcode刷题](https://github.com/doocs/leetcode)
+    * [Fucking算法](https://github.com/labuladong/fucking-algorithm)
+    * 
 
 
 
