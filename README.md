@@ -12,9 +12,7 @@
 * 性能优化、
 
 # 数据库
-## Mysql
-* Innodb存储引擎、
-
+## [MySQL](./MySQL/mysql.md)
 ## Redis
 *
 
@@ -30,7 +28,6 @@
 
 # 行业blog
 * [美团点评技术blog](https://tech.meituan.com/)
-
 
 
 
