@@ -105,23 +105,57 @@ usage: compile [options] file.go...
   ....
 ```
 
-# 安全学习
-go安全编程，待学习腾讯开源安全编码文档：
-https://github.com/Tencent/secguide/blob/main/Go%E5%AE%89%E5%85%A8%E6%8C%87%E5%8D%97.md#
+
+
+# 单元测试
+
+*   Fuzzing
+
+*   
+
+
+    ##3. beego项目学习
+    func Run(params ...string){
+        
+    } 
+
+    github：
+    go get -u github.com/go-redis/redis
+
+
+
+# Go编码安全
+
+*   输入校验和净化
+
+    ```
+    import "github.com/go-playground/validator/v10"
+    
+    // HTML输入净化
+    https://github.com/microcosm-cc/bluemonday
+    ```
+
+*   
+
+*   腾讯的Go安全指南：https://github.com/Tencent/secguide/blob/main/Go%E5%AE%89%E5%85%A8%E6%8C%87%E5%8D%97.md#1.1.2
+
+
+
+
 
 # 1.语言基础
 
 ## 1. 变量
     1. string不能赋值为nil
-    
+
 
 1. new和make的区别
 
 new和make用于不同类型
 new：只分配内存并且设置为zero值、并不会初始化对象、
  It's a built-in function that allocates memory, but unlike its namesakes in some other languages it does not initialize the memory, it only zeros it. That is, new(T) allocates zeroed storage for a new item of type T and returns its address, a value of type *T. In Go terminology, it returns a pointer to a newly allocated zero value of type T.
- 
- 
+
+
 * make：
 The built-in function make(T, args) serves a purpose different from new(T). It creates slices, maps, and channels only, and it returns an initialized (not zeroed) value of type T (not *T).  
 原因： 
@@ -255,7 +289,7 @@ func main() {
 
 
 ```
-    
+
 2. 可以使用nil的Slices，但是不能使用nil的map，
 
 ```
@@ -286,7 +320,7 @@ func main() {
 ## interface{} 
     Go没有类的概念、但是可以在类型上定义方法、
     interface{} 既有面向对象接口的作用，又有范型的作用。
-    
+
 interface{} 和 nil 的比较会分别判断 interface{} 的类型和数据是否同时为空。只有都为空的情况， interface{} 才等于 nil 
 
 Go interfaces generally belong in the package that uses values of the interface type, not the package that implements those values. The implementing package should return concrete (usually pointer or struct) types: that way, new methods can be added to implementations without requiring extensive refactoring.
@@ -294,19 +328,17 @@ Go interfaces generally belong in the package that uses values of the interface 
     
 **问题：interface**
 1. Add怎么实现任意类型求和功能？
-    
-
+   
 2. 结构体和对象、
     对象声明、使用、
 3. 怎么实现继承？
     怎么控制可以被子类访问？
      对象中成员变量用大小写区分public、private属性
     
-    
 7. 包管理
     多个文件可以属于一个包文件、 
- 
- 
+
+
 # 3. 协程与并发控制 
 
 ## 1. 协程
@@ -338,19 +370,20 @@ ch := make(chan int)
 ## 1. 几种同步机制的区别？
 
     Locker
-    
+
 ###  Cond 
     :实现一个条件变量、协程等待点或者通知时间发生 
     Pool：实现了一组临时对象，可以被单独保存或者获取。协程并发访问安全的。主要用户保存分配的对象。
-    
+
 ###   Once
  是一个对象，只能执行一次action
- 
+
 ### 读写锁 Mutex和RWMutex   
     Mutex：互斥锁
     RWMutex：读写互斥排他锁、
-    
-    
+
+
+​    
 ### WaitGroup
      用于等待一组协程结束。
 
@@ -359,7 +392,7 @@ ch := make(chan int)
 2. 怎么控制并发的协程数量 
     采用buffered channel控制
     var sema = make(chan struct{}, 10)
-   
+
 ```
 package main
 
@@ -438,16 +471,11 @@ vet
 相关材料命令字、
 https://rakyll.org/go-tool-flags/
 
-# 单元测试
 
 
-##3. beego项目学习
-func Run(params ...string){
-    
-} 
+#  性能优化
 
-github：
-go get -u github.com/go-redis/redis
+*   
 
 
 
@@ -461,26 +489,8 @@ go连接Redis客户端文档：
 https://godoc.org/github.com/go-redis/redis#Client.LPush
 
 3. 控制每5秒钟上报一次状态
+   
     
-    
+
 GOMAXPROCS
-
-# 单元测试
-
-
-
-# Go编码安全
-
-*   输入校验和净化
-
-    ```
-    import "github.com/go-playground/validator/v10"
-    
-    // HTML输入净化
-    https://github.com/microcosm-cc/bluemonday
-    ```
-    
-*   
-
-*   腾讯的Go安全指南：https://github.com/Tencent/secguide/blob/main/Go%E5%AE%89%E5%85%A8%E6%8C%87%E5%8D%97.md#1.1.2
 
