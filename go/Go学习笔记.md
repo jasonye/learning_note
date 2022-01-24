@@ -477,7 +477,15 @@ https://rakyll.org/go-tool-flags/
 
 
 
+
+
 # 参考资料
+
+## 常见的Go开源库：
+
+https://juejin.cn/post/7025760668594896909
+
+
 
 go Example
 https://gobyexample.com/
