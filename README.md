@@ -39,6 +39,11 @@
     * [The-Art-Of-Programming-By-July](https://github.com/julycoding/The-Art-Of-Programming-By-July)
     * [Leetcode刷题](https://github.com/doocs/leetcode)
     * [Fucking算法](https://github.com/labuladong/fucking-algorithm)
+    * Uber:https://github.com/orgs/uber/repositories?q=&type=&language=go&sort=stargazers
+    * didi的git仓库：https://github.com/didi
+    * Tecent仓库：https://github.com/orgs/Tencent/repositories
+    * Alibaba仓库：https://github.com/orgs/alibaba/repositories?q=&type=&language=go&sort=stargazers
+    * Baidu:https://github.com/orgs/baidu/repositories?q=&type=&language=go&sort=stargazers
     * 
 
 

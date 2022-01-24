@@ -118,7 +118,7 @@ usage: compile [options] file.go...
     func Run(params ...string){
         
     } 
-
+    
     github：
     go get -u github.com/go-redis/redis
 
@@ -434,25 +434,23 @@ GO111MODULE=on go install
 gomod命令
 
 
-kitool升级：
-export http_proxy=10.3.21.198:3128 https_proxy=10.3.21.198:3128
-export http_proxy=10.100.4.68:3128 https_proxy=10.100.4.68:3128
-export http_proxy=10.110.216.52:3128 https_proxy=10.110.216.52:3128
+k
 
 升级本地包：
-go get -u code.byted.org/video/tools@latest
+go get -u xxx@latest
 
 go build, go test, and other package-building commands add new dependencies to go.mod as needed.
 go get : changes the required version of a dependency (or adds a new dependency).
 go mod tidy: 删除不需要的包、或者添加一个新的依赖、
 查看包版本号：
-go list -m -versions code.byted.org/video/tools
+go list -m -versions xxx.xxx.xxx
 
 
 
 ## GOPROXY设置
+
 1.13版本后，可以设置goproxy
-go env -w GOPROXY="https://go-mod-proxy.byted.org,https://goproxy.cn,https://proxy.golang.org,direct"
+go env -w GOPROXY="https://goproxy.cn,https://proxy.golang.org,direct"
 
 
 # 依赖注入
